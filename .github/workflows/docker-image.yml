@@ -23,8 +23,8 @@ jobs:
       name: Build and Push the Docker Image
       uses: docker/build-push-action@v3
       with:
-          push: true
-          tags: ${{secrets.DOCKERHUB_USERNAME}}/cinginx:latest
-          file: .Dockerfile
+        push: true
+        tags: ${{secrets.DOCKERHUB_USERNAME}}/cinginx:latest
+        file: .Dockerfile
     
       
