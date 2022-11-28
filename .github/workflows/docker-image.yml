@@ -22,7 +22,17 @@ jobs:
       name: Build and Push the Docker Image
       uses: docker/build-push-action@v3
       with:
+        context: venta/
         push: true
         tags: ${{secrets.DOCKERHUB_USERNAME}}/cinginx:latest
+        file: ./venta/Dockerfile
+    -
+      name: Build and Push the Docker Image
+      uses: docker/build-push-action@v3
+      with:
+        context: vista/
+        push: true
+        tags: ${{secrets.DOCKERHUB_USERNAME}}/cinginx:latest
+        file: ./vista/Dockerfile
     
       
